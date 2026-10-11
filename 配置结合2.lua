@@ -17,13 +17,19 @@ local Window = WindUI:CreateWindow({
 
 -- ==================== 创建标签页 ====================
 local Tabs = {
-    wj = Window:Tab({ Title = "脚本加载配置选择两个配置只用选一个", Icon = "users" }), 
+    wj = Window:Tab({ Title = "脚本加载配置最后两个配置只用选一个", Icon = "users" }), 
 }
 -- ==================== 主功能页 ====================
 Tabs.wj:Button({
      Title = "ChronixUI加载🟧",
      Callback = function()
        loadstring(game:HttpGet("https://raw.githubusercontent.com/ggsq1741-debug/pz2/refs/heads/main/ChronixUI.lua"))()
+     end
+ })
+ Tabs.wj:Button({
+     Title = "Aifflow⁉️‼️",
+     Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/ggsq1741-debug/cQ/refs/heads/main/gangmao.lua"))()
      end
  })
 Tabs.wj:Button({
