@@ -17,9 +17,13 @@ local Window = WindUI:CreateWindow({
 
 -- ==================== 创建标签页 ====================
 local Tabs = {
-    wj = Window:Tab({ Title = "脚本加载配置最后两个配置只用选一个", Icon = "users" }), 
+    wj = Window:Tab({ Title = "脚本加载配置最后3个配置只用选一个", Icon = "users" }), 
 }
 -- ==================== 主功能页 ====================
+Tabs.wj:Code({
+    Title = "你好",
+    Code = "此脚本售价仅为15元"
+})
  Tabs.wj:Button({
      Title = "AifflowUI简洁精简版",
      Callback = function()
@@ -27,15 +31,21 @@ local Tabs = {
      end
  })
 Tabs.wj:Button({
-     Title = "WindUI加载",
+     Title = "WindUI加载✅",
      Callback = function()
        loadstring(game:HttpGet("https://raw.githubusercontent.com/ggsq1741-debug/Wind1/refs/heads/main/WindUI2.lua"))()
      end
  })
  Tabs.wj:Button({
-     Title = "ObsidianUI加载可以保存配置",
+     Title = "ObsidianUI加载可以保存配置✅",
      Callback = function()
        loadstring(game:HttpGet("https://raw.githubusercontent.com/ggsq1741-debug/ObsidianUI/refs/heads/main/Obsidian2.lua"))()
+     end
+ })
+ Tabs.wj:Button({
+     Title = "ouroborosUI最佳的方式✅",
+     Callback = function()
+       loadstring(game:HttpGet("https://raw.githubusercontent.com/ggsq1741-debug/ouroborosUI/refs/heads/main/2ji%E6%B7%B7%E6%B7%86.lua"))()
      end
  })
  Window:SelectTab(1)
